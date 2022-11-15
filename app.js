@@ -1,11 +1,11 @@
 
 
 class Usuario {
-    constructor (nombre, apellido, libros, mascotas) {
+    constructor (nombre, apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.libros = []
-        this.mascotas = mascotas
+        this.mascotas = []
     }
 
     getFullName() {
@@ -17,16 +17,29 @@ class Usuario {
     }
 
     countMascotas() {
-        if (this.mascotas.lenght) {
-            console.log(`El nombre de las mascotas: ${this.mascotas.lenght}`)
+        if (this.mascotas.length) {
+            console.log(`Cantidad de mascotas: ${this.mascotas.length}`)
         } else {
             console.log('No hay mascotas')
         }
     }
 
     addBook( autorLibro, nombreLibro) {
-
+        this.libros.push({autorLibro, nombreLibro})
     }
 
-
+    getBooksNames() {
+        this.libros.forEach( libro => console.log(`Nombre del libro: ${libro.nombreLibro}`))
+    }
 }
+
+const usuario1 = new Usuario( 'Ivan', 'Bonnot' )
+usuario1.addMascota('Perro')
+usuario1.addMascota('Gato')
+usuario1.addBook('Isaac Asimov', 'Yo Robot')
+
+usuario1.getFullName()
+usuario1.countMascotas()
+usuario1.getBooksNames()
+
+console.log(usuario1)
