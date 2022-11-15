@@ -37,6 +37,7 @@ const usuario1 = new Usuario( 'Ivan', 'Bonnot' )
 usuario1.addMascota('Perro')
 usuario1.addMascota('Gato')
 usuario1.addBook('Isaac Asimov', 'Yo Robot')
+usuario1.addBook('Stephen King', 'La Torre Oscura I: El pistolero')
 
 usuario1.getFullName()
 usuario1.countMascotas()
