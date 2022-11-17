@@ -1,38 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: #000428;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #004e92, #000428);  
-background: linear-gradient(to right, #004e92, #000428); 
+    background-color: #686de0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0;
+    padding: 20px;
 }
-header {
-    margin: 30px 0;
+
+.container {
+    height: auto;
+    width: 75vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 100%;
+
 }
-.contenido {
-    padding:20px;
+
+.container .border {
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #000;
 }
-.contenido-principal {
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
+
+.container .border p {
+    margin: 5px;
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: 20px;
 }
-.presupuesto p{
-    margin-bottom: 0;
-    font-weight: bold;
+
+.resultado div {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 40px;
+    margin: 20px;
+    max-width: 600px;
+    text-align: center;
 }
-.presupuesto p span {
-    font-weight: normal;
+
+input {
+    margin: 0px 30px 10px 30px;
+    padding: 0px 30px 0px 30px;
+    text-align: center;
+    font-size: 1.5rem;
 }
-#gastos {
-    margin-bottom: 30px;
+
+h1 {
+    font-size: 1.5rem;
 }
-h1{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    color: white;
-}
+
 h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    color:#004e92;
-    font-size: 22px;
-    margin-bottom:30px;
+    margin: 2px;
+}
+
+.btn {
+    background-color: #9f68e0;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 14px 40px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+#reinicio:disabled {
+    background: #ccc;
+    cursor: default;
+}
+
+.active:enabled {
+    background-color: #9f68e0;
+    cursor: pointer;
 }

@@ -1,62 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Gasto Semanal</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="//res.cloudinary.com/hdsqazxtw/image/upload/v1558445734/favicon-32x32_fy92aq.png">
+    <title>Back End - Desafio I</title>
+</head>
 
-  </head>
-  <body>
+<body>
+
     <div class="container">
-        <header>
-            <h1 class="text-center">Gasto Semanal</h1>
-        </header>
-        <section class="contenido-principal">
-            <div class="row">
-                <div class="col ">
-                    <div class="contenido primario">
-                        <h2 class="text-center">Añade tus gastos aqui</h2>
-                            <form id="agregar-gasto" action="#">
-                                <div class="form-group">
-                                    <label for="gasto">Gasto:</label>
-                                    <input type="text" class="form-control" id="gasto" placeholder="Nombre Gasto">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cantidad">Cantidad:</label>
-                                    <input type="text" class="form-control" id="cantidad" placeholder="Cantidad en $">
-                                </div>
+        <div class="border">
+            <p>Nombre</p>
+            <input id="nombre" type="text">
+            <p>Apellido</p>
+            <input id="apellido" type="text">
+        </div>
+        <div class="border">
+            <h2>Mascota</h2>
+            <p>Nombre de tu mascota</p>
+            <input id="nombreMascota" type="text">
+        </div>
+        <div class="border">
+            <h2>Libro</h2>
+            <p>Nombre del libro</p>
+            <input id="nombreLibro" type="text">
+            <p>Autor del libro</p>
+            <input id="autorLibro" type="text">
+        </div>
+        <button id="enviar" class="btn">Enviar</button>
+        <button id="reinicio" class="btn disabled">Reiniciar formulario</button>
+        <div id="resultado" class="resultado">
 
-                                <button type="submit" class="btn btn-primary">Agregar</button>
-                            </form>
-
-                    </div> <!--.contenido-->
-                </div> <!--.col-->
-
-                <div class="col">
-                    <div class="contenido secundario">
-
-                        <h2 class="text-center">Listado</h2>
-
-                        <div id="gastos">
-                            <ul class="list-group"></ul>
-                        </div>
-                        <div id="presupuesto" class="presupuesto">
-                            <div class="alert alert-primary">
-                                <p>Presupuesto: $ <span id="total"></span> </p>
-                            </div>
-                            <div class="restante alert alert-success">
-                                <p>Restante: $ <span id="restante"></span></p>
-                            </div>
-                        </div> <!--.presupuesto-->
-                    </div> <!--.contenido-->
-                </div><!--.col-->
-            </div> <!--.row-->
-        </section>
+        </div>
     </div>
-
-    
     <script src="app.js"></script>
 </body>
+
 </html>
