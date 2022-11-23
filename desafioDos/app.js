@@ -1,50 +1,39 @@
+const fs = require ('fs')
 
 
-class Usuario {
-    constructor(nombre, apellido) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.libros = []
-        this.mascotas = []
+class Contenedor {
+    constructor( file ) {
+        this.file = file
     }
 
-    getFullName() {
-        console.log(`El nombre es: ${this.nombre}, el apellido es: ${this.apellido}`)
-        return (`${this.nombre} ${this.apellido}`)
+    async save () {
+
     }
 
-    addMascota(nombreMascota) {
-        this.mascotas = [...this.mascotas, nombreMascota]
+    async getById ( id ) {
+
     }
 
-    countMascotas() {
-        if (this.mascotas.length) {
-            console.log(`Cantidad de mascotas: ${this.mascotas.length}`)
-            return (this.mascotas).length
-        } else {
-            console.log('No hay mascotas')
-        }
+    async getAll () {
+        try{
+            const productos = await fs.promises.readFile( this.file, 'utf-8')
+            return JSON.parse(objects)
+      
+          } catch(err) {
+            console.log(`Error: ${err}`)
+          }
     }
 
-    addBook(autorLibro, nombreLibro) {
-        this.libros.push({ autorLibro, nombreLibro })
+    async deleteById ( id ) {
+
     }
 
-    getBooksNames() {
-        return this.libros.map(libro => libro.nombreLibro)
+    async deleteAll () {
+
     }
+
 }
 
-const usuario = new Usuario('Ivan', 'Bonnot')
-usuario.addMascota('Perro')
-usuario.addMascota('Gato')
-usuario.addBook('Isaac Asimov', 'Yo Robot')
-usuario.addBook('Stephen King', 'La Torre Oscura I: El pistolero')
-
-usuario.getFullName()
-usuario.countMascotas()
-usuario.getBooksNames()
-console.log('Nombre de los libros:', usuario.getBooksNames())
 
 
 
