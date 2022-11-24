@@ -1,34 +1,39 @@
-const fs = require ('fs')
+const fs = require('fs')
 
 
 class Contenedor {
-    constructor( file ) {
+    constructor(file) {
         this.file = file
     }
 
-    async save () {
-
-    }
-
-    async getById ( id ) {
-
-    }
-
-    async getAll () {
-        try{
-            const productos = await fs.promises.readFile( this.file, 'utf-8')
-            return JSON.parse(objects)
-      
-          } catch(err) {
+    async save(file, productos) {
+        try {
+            await fs.promises.writeFile(file, productos)
+        } catch (err) {
             console.log(`Error: ${err}`)
-          }
-    }
-
-    async deleteById ( id ) {
+        }
 
     }
 
-    async deleteAll () {
+    async getById(id) {
+
+    }
+
+    async getAll() {
+        try {
+            const productos = await fs.promises.readFile(this.file, 'utf-8')
+            return JSON.parse(productos)
+
+        } catch (err) {
+            console.log(`Error: ${err}`)
+        }
+    }
+
+    async deleteById(id) {
+
+    }
+
+    async deleteAll() {
 
     }
 
